@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CampusInfo — Register</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="brand">CampusInfo</div>
+            <nav class="nav"><a href="home.html">Home</a><a href="Course.html">Courses</a><a
+                    href="Register.html">Register</a><a href="gallery.html">Gallery</a></nav>
+        </header>
+
+        <main style="margin-top:18px">
+            <h2>Student Registration</h2>
+            <p class="small">(HTML5 form controls demonstrate validation & different input types)</p>
+
+            <form class="card">
+                <label for="nm">Full Name</label>
+                <input id="nm" type="text" placeholder="Your Name" required>
+
+                <label for="em">Email</label>
+                <input id="em" type="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone (10 digits)</label>
+                <input id="phone" type="tel" pattern="[0-9]{10}" placeholder="9536669438">
+
+                <label for="course">Choose Course</label>
+                <select id="course" required>
+                    <option value="">-- select --</option>
+                    <option>Diploma in Web Dev</option>
+                    <option>BCA</option>
+                    <option>B.Com</option>
+                </select>
+
+                <label for="dob">Date of birth</label>
+                <input id="dob" type="date">
+
+                <label for="about">Short Bio</label>
+                <textarea id="about" placeholder="Tell us in 1–2 lines"></textarea>
+
+                <button class="btn" type="submit">Submit</button>
+                <button class="btn secondary" type="reset">Reset</button>
+            </form>
+        </main>
+
+        <footer>© 2025 CampusInfo</footer>
+    </div>
+</body>
+
+</html>

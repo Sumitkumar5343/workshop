@@ -1,0 +1,267 @@
+:root {
+    --primary: #2b6cb0;
+    --accent: #ff7a59;
+    --muted: #6b7280;
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --radius: 10px;
+    --maxw: 1100px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: linear-gradient(rgb(241, 241, 114), rgb(97, 236, 97), rgb(95, 164, 202));
+    color: #222
+}
+
+.container {
+    max-width: var(--maxw);
+    margin: 24px auto;
+    padding: 18px
+}
+
+.header {
+    background: linear-gradient(90deg, var(--primary), #1e4f7a);
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px
+}
+
+.header .brand {
+    font-size: 22px;
+    font-weight: 700
+}
+
+.nav {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap
+}
+
+.nav a {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600
+}
+
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+    transition: all .18s
+}
+
+.hero {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 22px;
+    margin-top: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    border-radius: 12px
+}
+
+.hero .left {
+    flex: 1
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 32px
+}
+
+.hero p {
+    margin: 8px 0;
+    color: var(--muted)
+}
+
+.cta {
+    margin-top: 12px
+}
+
+.cta a {
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700
+}
+
+.cta a:hover {
+    opacity: .95;
+    transform: translateY(-2px)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 18px
+}
+
+.card {
+    background: radial-gradient(rgb(241, 241, 114), rgb(97, 236, 97), rgb(95, 164, 202), var(--bg));
+    padding: 14px;
+    border-radius: 10px solid black;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06)
+}
+
+.card h3 {
+    margin: 0 0 8px 0
+}
+
+.small {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.table-wrap {
+    overflow: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eef2f7;
+    text-align: left
+}
+
+th {
+    background: linear-gradient(90deg, var(--primary), #1e4f7a);
+    color: #fff;
+    font-weight: 700
+}
+
+form {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e6eef7;
+    border-radius: 8px;
+    margin-top: 6px
+}
+
+textarea {
+    min-height: 100px
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px
+}
+
+.btn.secondary {
+    background: #fff;
+    color: var(--primary);
+    border: 1px solid var(--primary)
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px
+}
+
+.gallery img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform .18s
+}
+
+.gallery a:focus img,
+.gallery img:hover {
+    transform: scale(1.04)
+}
+
+.lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 60;
+    padding: 20px
+}
+
+.lightbox:target {
+    display: flex
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6)
+}
+
+footer {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 18px
+}
+
+@media (max-width:680px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .nav {
+        justify-content: flex-start
+    }
+
+    .hero h1 {
+        font-size: 22px
+    }
+}
